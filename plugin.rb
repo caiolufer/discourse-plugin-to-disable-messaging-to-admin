@@ -7,7 +7,7 @@
 PLUGIN_NAME ||= "disable_messaging_to_admin".freeze
 
 after_initialize do
-  TopicGuardian.class_eval do
+  Guardian.class_eval do
     alias_method :orig_can_send_private_message?, :can_send_private_message?
     def can_send_private_message?(target)
       orig_can_send_private_message?(target) and target.id > 1
