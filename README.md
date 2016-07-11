@@ -1,0 +1,1 @@
+Discourse plugin that disables users from bombarding admin with PMs
