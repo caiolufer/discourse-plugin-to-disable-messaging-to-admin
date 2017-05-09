@@ -10,7 +10,7 @@ after_initialize do
   Guardian.class_eval do
     alias_method :orig_can_send_private_message?, :can_send_private_message?
     def can_send_private_message?(target)
-      orig_can_send_private_message?(target) and target.id > 1
+      orig_can_send_private_message?(target) and target.id > 90
     end
   end
 end
